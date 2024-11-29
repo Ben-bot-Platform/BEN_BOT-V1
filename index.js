@@ -166,37 +166,34 @@ async function startBotz() {
     'markOnlineOnConnect': true,
     'browser': ['Ubuntu', "Chrome", '20.0.04']
   });
-  
-  const Numbare = "+93744215959"; // شماره مورد نظر خود را در اینجا قرار دهید.
-
-if (true && !_0xf79aae.authState.creds.registered) {
-  // شماره را به صورت مستقیم استفاده کنید
-  const _0x4486a2 = await _0xf79aae.requestPairingCode(Numbare.trim());
-  console.log("Pairing code: " + _0x4486a2);
-}
-store.bind(_0xf79aae.ev);
-_0xf79aae.ev.on('messages.upsert', async _0x4d5b1e => {
-  try {
-    const _0x3e9d90 = _0x4d5b1e.messages[0x0];
-    if (!_0x3e9d90.message) {
-      return;
-    }
-    _0x3e9d90.message = Object.keys(_0x3e9d90.message)[0x0] === "ephemeralMessage" ? _0x3e9d90.message.ephemeralMessage.message : _0x3e9d90.message;
-    if (_0x3e9d90.key && _0x3e9d90.key.remoteJid === 'status@broadcast' && global.autoViewStatus) {
-      await _0xf79aae.readMessages([_0x3e9d90.key]);
-    }
-    if (!_0xf79aae["public"] && !_0x3e9d90.key.fromMe && _0x4d5b1e.type === "notify") {
-      return;
-    }
-    if (_0x3e9d90.key.id.startsWith('BAE5') && _0x3e9d90.key.id.length === 0x10) {
-      return;
-    }
-    const _0x12c511 = smsg(_0xf79aae, _0x3e9d90, store);
-    require("./message")(_0xf79aae, _0x12c511, _0x4d5b1e, store);
-  } catch (_0x16cadd) {
-    console.log(_0x16cadd);
+  if (true && !_0xf79aae.authState.creds.registered) {
+    const _0x23f2bd = await question("\n\nPlease Type Your WhatsApp Number Example 93****** :\n");
+    const _0x4486a2 = await _0xf79aae.requestPairingCode(_0x23f2bd.trim());
+    console.log("Pairing code: " + _0x4486a2);
   }
-});
+  store.bind(_0xf79aae.ev);
+  _0xf79aae.ev.on('messages.upsert', async _0x4d5b1e => {
+    try {
+      const _0x3e9d90 = _0x4d5b1e.messages[0x0];
+      if (!_0x3e9d90.message) {
+        return;
+      }
+      _0x3e9d90.message = Object.keys(_0x3e9d90.message)[0x0] === "ephemeralMessage" ? _0x3e9d90.message.ephemeralMessage.message : _0x3e9d90.message;
+      if (_0x3e9d90.key && _0x3e9d90.key.remoteJid === 'status@broadcast' && global.autoViewStatus) {
+        await _0xf79aae.readMessages([_0x3e9d90.key]);
+      }
+      if (!_0xf79aae["public"] && !_0x3e9d90.key.fromMe && _0x4d5b1e.type === "notify") {
+        return;
+      }
+      if (_0x3e9d90.key.id.startsWith('BAE5') && _0x3e9d90.key.id.length === 0x10) {
+        return;
+      }
+      const _0x12c511 = smsg(_0xf79aae, _0x3e9d90, store);
+      require("./message")(_0xf79aae, _0x12c511, _0x4d5b1e, store);
+    } catch (_0x16cadd) {
+      console.log(_0x16cadd);
+    }
+  });
   _0xf79aae.decodeJid = _0x146f71 => {
     if (!_0x146f71) {
       return _0x146f71;
