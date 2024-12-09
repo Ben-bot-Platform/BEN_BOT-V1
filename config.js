@@ -1143105,9 +1143105,11 @@ global.unavailable = true;
 //to show your real presence  
 global.available = false;   
 
-// to show always online  
+//AUTO READING
 global.autoreadmessages = false;   
 
+//ANTI DELETE
+global.ANTI_DELETE = true;
 ///To always read messages
 global.chatbot = false;
 global.autoreact = false;
