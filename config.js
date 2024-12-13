@@ -1143097,6 +1143097,7 @@ global.autoTyping = false;                //make true to enable auto typing
 global.autoRecord = false;                //make true to enable auto recording
 global.autoViewStatus = true;    
 global.autoStatusDownload = true;
+global.autostatusreact = false;
 global.autobio = false;
 global.welcome = false;
 //make true to view statuses
