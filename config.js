@@ -1143094,6 +1143094,7 @@ global.rpg = {
 
 //auto functioner dont change it
 global.autoTyping = false;                //make true to enable auto typing
+global.autoreply = false;    //AUTO REPLY
 global.autoRecord = false;                //make true to enable auto recording
 global.autoViewStatus = false;    
 global.autoStatusDownload = false;
