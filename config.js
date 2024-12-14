@@ -1143095,13 +1143095,13 @@ global.rpg = {
 //auto functioner dont change it
 global.autoTyping = false;                //make true to enable auto typing
 global.autoRecord = false;                //make true to enable auto recording
-global.autoViewStatus = true;    
-global.autoStatusDownload = true;
-global.autostatusreact = false;
+global.autoViewStatus = false;    
+global.autoStatusDownload = false;
+global.autoviewreactstatus = false;
 global.autobio = false;
 global.welcome = false;
 //make true to view statuses
-global.unavailable = true;   
+global.unavailable = false;   
   
 //to show your real presence  
 global.available = false;   
@@ -1143110,7 +1143110,7 @@ global.available = false;
 global.autoreadmessages = false;   
 
 //ANTI DELETE
-global.ANTI_DELETE = true;
+global.ANTI_DELETE = false;
 ///To always read messages
 global.chatbot = false;
 global.autoreact = false;
