@@ -1143110,7 +1143110,7 @@ global.available = false;
 global.autoreadmessages = false;   
 
 //ANTI DELETE
-global.ANTI_DELETE = false;
+global.antidelete = false;
 ///To always read messages
 global.chatbot = false;
 global.autoreact = false;
