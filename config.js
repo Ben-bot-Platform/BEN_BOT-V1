@@ -1143109,8 +1143109,6 @@ global.available = false;
 //AUTO READING
 global.autoreadmessages = false;   
 
-//ANTI DELETE
-global.antidelete = true; // پیش‌فرض غیرفعال است
 ///To always read messages
 global.chatbot = false;
 global.autoreact = false;
